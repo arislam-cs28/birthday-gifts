@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://suojfqlpcntx"]
+
+[ext_resource type="Script" uid="uid://cnbfbfxqikf3r" path="res://main_scene/home.gd" id="1_tt30a"]
+
+[node name="Home" type="Control" unique_id=1849579431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tt30a")
+
+[node name="Background" type="Panel" parent="." unique_id=2067235362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HappyBirthday" type="TextureRect" parent="Background" unique_id=1854189418]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -196.0
+offset_right = 20.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=1020635282]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -536.0
+offset_top = 130.0
+offset_right = -192.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button2" type="Button" parent="." unique_id=96577347]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = 98.0
+offset_right = 160.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button3" type="Button" parent="." unique_id=1434990682]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = 130.0
+offset_right = 536.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2

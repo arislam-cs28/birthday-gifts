@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="birthday-gifts"
+config/tags=PackedStringArray("fun", "hack_club")
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1200
+window/size/viewport_height=700
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 
