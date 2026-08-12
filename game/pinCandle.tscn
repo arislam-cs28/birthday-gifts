@@ -1,5 +1,27 @@
 [gd_scene format=3 uid="uid://bddyy4htwncct"]
 
+[ext_resource type="Script" uid="uid://b36i5hcpoltsk" path="res://game/pin_candle.gd" id="1_uvflm"]
+[ext_resource type="Texture2D" uid="uid://ixwsbh2pnp3b" path="res://assets/art/cupcake.png" id="2_wc7ev"]
+[ext_resource type="FontFile" uid="uid://c6lwi7aajcuiy" path="res://assets/fonts/Main.ttf" id="3_6alu7"]
+[ext_resource type="Theme" uid="uid://mhemgxdnfbec" path="res://reusables/buttons.tres" id="4_iv6je"]
+[ext_resource type="Texture2D" uid="uid://c44evtic5pbcl" path="res://assets/art/candle.png" id="5_wc7ev"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mi0vw"]
+texture = ExtResource("2_wc7ev")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi0vw"]
+bg_color = Color(0.26483694, 0.00078327983, 0.46221358, 0.54901963)
+border_width_left = 5
+border_width_top = 10
+border_width_right = 5
+border_width_bottom = 10
+border_color = Color(0.12941177, 0, 0.24313726, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [node name="PinCandle" type="Control" unique_id=372804771]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +29,89 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uvflm")
+
+[node name="Panel" type="Panel" parent="." unique_id=639772258]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 700.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mi0vw")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1907318817]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 40.0
+offset_right = 1120.0
+offset_bottom = 560.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi0vw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2" unique_id=1474122871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -228.0
+offset_right = 164.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_6alu7")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "What can you do this year? New birthday, new beginnings, after all!
+
+- Visit another country
+- Learn a new hobby
+- Meet someone in a location you've never been in before
+- Set a reading goal
+- Go on a staycation
+- Create a new passion project
+- Volunteer for a cause you genuinely care for
+- Meet up with friends and play birthday trivia (if you just want to do something ON your birthday)
+- Feast on your favorite foods for a week
+- Go to a workshop or do something else that let's you engage your creative side
+
+There's so much you could do, even besides this! You've lived another year. So enjoy it as long as you can! Hope you have a great day :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=995175087]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 584.0
+offset_right = 1104.0
+offset_bottom = 672.0
+theme = ExtResource("4_iv6je")
+text = "Back  to the party!"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1322318948]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 280.0
+texture = ExtResource("5_wc7ev")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1304301238]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 72.0
+offset_right = 296.0
+offset_bottom = 312.0
+texture = ExtResource("5_wc7ev")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=943344985]
+layout_mode = 0
+offset_left = 288.0
+offset_top = -72.0
+offset_right = 408.0
+offset_bottom = 168.0
+texture = ExtResource("5_wc7ev")
+expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

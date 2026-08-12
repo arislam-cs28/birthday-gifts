@@ -1,5 +1,30 @@
 [gd_scene format=3 uid="uid://cu0y7rhxpn686"]
 
+[ext_resource type="Texture2D" uid="uid://dmu3k36npq2bw" path="res://assets/art/gen_bg.png" id="1_mf8qm"]
+[ext_resource type="Script" uid="uid://diolpt6gtw6n0" path="res://game/card_finding.gd" id="1_pq2yi"]
+[ext_resource type="Texture2D" uid="uid://c072meat5fli5" path="res://assets/art/envelope_dark.png" id="2_5oy7v"]
+[ext_resource type="Texture2D" uid="uid://c0a052jrip0fr" path="res://assets/art/envelope_light.png" id="3_pq2yi"]
+[ext_resource type="Texture2D" uid="uid://dhlww08bayggo" path="res://assets/art/gen_decal.png" id="4_7keea"]
+[ext_resource type="FontFile" uid="uid://vx87st8gs1ej" path="res://assets/fonts/Title.ttf" id="6_7keea"]
+[ext_resource type="Theme" uid="uid://mhemgxdnfbec" path="res://reusables/buttons.tres" id="6_htdib"]
+[ext_resource type="FontFile" uid="uid://c6lwi7aajcuiy" path="res://assets/fonts/Main.ttf" id="7_7keea"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htdib"]
+texture = ExtResource("1_mf8qm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mi0vw"]
+bg_color = Color(0.7570305, 0.7289754, 0.7333944, 1)
+border_width_left = 10
+border_width_top = 20
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0.703373, 0.63343334, 0.50531524, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 10
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 10
+
 [node name="CardFinding" type="Control" unique_id=2098364333]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +32,181 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pq2yi")
+
+[node name="Background" type="Panel" parent="." unique_id=2133038678]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_htdib")
+
+[node name="Env1" type="TextureButton" parent="." unique_id=1895981270]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 72.0
+offset_right = 400.0
+offset_bottom = 232.0
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Env2" type="TextureButton" parent="." unique_id=1222266569]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 206.48434
+offset_bottom = 315.89868
+rotation = 0.5235988
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Env5" type="TextureButton" parent="." unique_id=1391601242]
+layout_mode = 0
+offset_left = 983.9999
+offset_top = 112.00001
+offset_right = 1122.7455
+offset_bottom = 221.70062
+rotation = 0.2617994
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1377119345]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 700.0
+mouse_filter = 2
+texture = ExtResource("4_7keea")
+
+[node name="Env3" type="TextureButton" parent="." unique_id=1179337812]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 480.0
+offset_right = 392.0
+offset_bottom = 608.0
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Env4" type="TextureButton" parent="." unique_id=1457348654]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 327.99997
+offset_right = 1056.0
+offset_bottom = 455.99997
+rotation = 1.0471976
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Env6" type="TextureButton" parent="." unique_id=788327685]
+layout_mode = 0
+offset_left = 824.0589
+offset_top = 565.89044
+offset_right = 962.8045
+offset_bottom = 675.59106
+rotation = 2.0943952
+texture_normal = ExtResource("2_5oy7v")
+texture_pressed = ExtResource("2_5oy7v")
+texture_hover = ExtResource("3_pq2yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Letter" type="Panel" parent="." unique_id=1263884572]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -264.0
+offset_right = 492.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mi0vw")
+
+[node name="Close" type="Button" parent="Letter" unique_id=1440166984]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -99.0
+offset_right = 86.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_htdib")
+theme_override_fonts/font = ExtResource("6_7keea")
+theme_override_font_sizes/font_size = 36
+text = "Close!"
+
+[node name="Label" type="Label" parent="Letter" unique_id=972995334]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.5
+offset_top = 9.0
+offset_right = 267.5
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.37183267, 0.2738509, 0.13290954, 1)
+theme_override_fonts/font = ExtResource("6_7keea")
+theme_override_font_sizes/font_size = 70
+text = "Happy Birthday!"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Letter" unique_id=1864357674]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.0
+offset_top = -142.0
+offset_right = 358.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.23529412, 0.1882353, 0.1882353, 1)
+theme_override_fonts/normal_font = ExtResource("7_7keea")
+theme_override_font_sizes/normal_font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=453893986]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 600.0
+offset_right = 1176.0
+offset_bottom = 680.0
+theme = ExtResource("6_htdib")
+text = "Home!"
+
+[connection signal="pressed" from="Env1" to="." method="_on_env_1_pressed"]
+[connection signal="pressed" from="Env2" to="." method="_on_env_2_pressed"]
+[connection signal="pressed" from="Env5" to="." method="_on_env_5_pressed"]
+[connection signal="pressed" from="Env3" to="." method="_on_env_3_pressed"]
+[connection signal="pressed" from="Env4" to="." method="_on_env_4_pressed"]
+[connection signal="pressed" from="Env6" to="." method="_on_env_6_pressed"]
+[connection signal="pressed" from="Letter/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

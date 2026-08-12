@@ -53,8 +53,8 @@ offset_bottom = 282.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ryjsw")
-text = "Pin the 
-Candle!"
+text = "Birthday
+Goals!"
 
 [node name="Cards" type="Button" parent="." unique_id=1434990682]
 layout_mode = 1
