@@ -12,8 +12,13 @@ config_version=5
 
 config/name="birthday-gifts"
 config/tags=PackedStringArray("fun", "hack_club")
+run/main_scene="uid://suojfqlpcntx"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Bgm="*uid://2377s42km81s"
 
 [display]
 

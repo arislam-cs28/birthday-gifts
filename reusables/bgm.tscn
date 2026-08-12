@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://2377s42km81s"]
+
+[ext_resource type="AudioStream" uid="uid://pqc4ggotmpne" path="res://assets/music/bdayysws.mp3" id="1_cryqc"]
+
+[node name="Bgm" type="AudioStreamPlayer2D" unique_id=791140862]
+stream = ExtResource("1_cryqc")
+autoplay = true
